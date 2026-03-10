@@ -1,7 +1,19 @@
 #include <iostream>
+#include "GridMap.h"
 
 int main()
 {
-    std::cout << "Autonomous Robot Navigator Started" << std::endl;
+    GridMap map;
+
+    if (map.loadFromFile("../data/maps/simple_map.txt"))
+    {
+        std::cout << "Map Loaded:\n";
+        map.display();
+    }
+    else
+    {
+        std::cout << "Failed to load map.\n";
+    }
+
     return 0;
 }
