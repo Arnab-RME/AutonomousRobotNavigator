@@ -62,3 +62,12 @@ int GridMap::getCols() const
 {
     return cols;
 }
+char GridMap::getCell(int r, int c) const
+{
+    return grid[r][c];
+}
+
+bool GridMap::isInside(int r, int c) const
+{
+    return r >= 0 && r < rows && c >= 0 && c < cols;
+}

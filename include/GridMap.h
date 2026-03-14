@@ -19,6 +19,9 @@ public:
 
     int getRows() const;
     int getCols() const;
+
+    char getCell(int r, int c) const;
+    bool isInside(int r, int c) const;
 };
 
 #endif
